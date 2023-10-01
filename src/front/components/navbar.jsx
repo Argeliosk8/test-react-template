@@ -8,11 +8,14 @@ export const NavBar = ()=>{
     return(
         <nav class="navbar navbar-expand-lg bg-black">
           <div class="container-fluid">
+          
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <a class="navbar-brand" href="#">Hidden brand</a>
+              <a  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                <i class="fa-solid fa-bars fa-xl" style={{color: "#dfe4ec"}}></i>
+              </a>
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <Link class="nav-link active" aria-current="page" to={"/"}>Home</Link>

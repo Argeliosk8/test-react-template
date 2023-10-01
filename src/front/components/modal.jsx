@@ -2,7 +2,8 @@ import React from "react";
 
 export const Modal = ()=>{
     return(
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -12,12 +13,12 @@ export const Modal = ()=>{
       <div class="modal-body">
         <form>
           <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <label for="recipient-name" class="col-form-label">Username</label>
             <input type="text" class="form-control" id="recipient-name" />
           </div>
           <div class="mb-3">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="message-text" class="col-form-label">Password:</label>
+            <input type="password" class="form-control" id="message-text"></input>
           </div>
         </form>
       </div>
@@ -28,5 +29,6 @@ export const Modal = ()=>{
     </div>
   </div>
 </div>
+</>
     )
 }

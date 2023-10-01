@@ -25,7 +25,7 @@ export const Dashboard = ()=>{
     ],
     datasets: [{
       label: 'My First Dataset',
-      data: [300, 50, 100],
+      data: [Math.floor(Math.random() * 500), Math.floor(Math.random() * 500), Math.floor(Math.random() * 500)],
       backgroundColor: [
         'rgb(255, 99, 132)',
         'rgb(54, 162, 235)',
@@ -48,7 +48,7 @@ export const Dashboard = ()=>{
     },
   };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
+const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August']
   const dataLine = {
     labels: labels,
     datasets: [
@@ -70,6 +70,12 @@ const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
         borderColor: 'rgb(53, 12, 245)',
         backgroundColor: 'rgba(53, 12, 245, 0.5)',
       },
+      {
+        label: 'Dataset 4',
+        data: labels.map(() => Math.floor(Math.random() * 1000)),
+        borderColor: 'rgb(53, 12, 200)',
+        backgroundColor: 'rgba(53, 12, 200, 0.5)',
+      },
     ],
   };
 
@@ -77,10 +83,17 @@ const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
     return(
         <>
           <div className="container">
-            <Doughnut data={dataPie} options={optionsPie}/>
-          </div>
-          <div className="container">
-            <Line data={dataLine} options={optionsLine}></Line>
+            <div className="row">
+              <div className="col">
+                 <Doughnut data={dataPie} options={optionsPie}/>
+              </div>
+              <div className="col">
+                 <Line data={dataLine} options={optionsLine}></Line>
+              </div>
+              <div className="col">
+                <Doughnut data={dataPie} options={optionsPie}/>
+              </div>
+            </div>
           </div>
         </>
     )

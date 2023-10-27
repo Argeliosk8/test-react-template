@@ -3,6 +3,7 @@ import { Outlet } from "react-router";
 import { NavBar } from "../components/navbar.jsx";
 import { OffCanvas } from "../components/offCanvas.jsx";
 import { Modal } from "../components/modal.jsx";
+import { SideNav } from "../components/sideNavBar.jsx";
 
 
 function Root() {
